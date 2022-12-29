@@ -7,9 +7,6 @@ channels:
 dependencies:
   - matplotlib=3.2.2=0
   - matplotlib-base=3.2.2=py37h5670ca0_0
-  - numpy=1.19.1=py37h3b9f5b6_0
-  - numpy-base=1.19.1=py37hcfb5961_0
-  - numpydoc=1.1.0=py_0
   - tensorflow=2.0.0=mkl_py37hda344b4_0
   - tensorflow-base=2.0.0=mkl_py37h66b1bf0_0
   - tensorflow-estimator=2.0.0=pyh2649769_0
