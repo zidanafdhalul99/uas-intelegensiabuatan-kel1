@@ -1,0 +1,6 @@
+matplotlib
+tensorflow
+numpy
+os
+flask
+datetime
