@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Trash Result</title>
+</head>
+<body>
+    <div class="page flex flex-col">
+        <div class="navbar h-20 w-screen bg-emerald-500 text-xl text-white justify-between flex items-center">
+            <a href="/" class="px-5"><</a>
+            <p class="grow">Trash Classifier</p>
+            <div></div>
+        </div>
+        <div class="result flex flex-row">
+            <p class="text-2xl mt-4 ml-8">Result</p>
+        </div>
+            <img src="static/images/output_{{ current_time }}.png" alt="Input Image" class="m-5 w-full">
+        <div class="tipe flex flex-col mt-8 mx-8 h-44 text-xl text-green-700 font-semibold gap-1">
+            <div class="{{ 'active: text-3xl text-black' if category == 'glass' else '' }}">Glass</div>
+            <div class="{{ 'active: text-3xl text-black' if category == 'cardboard' else '' }}">Cardboard</div>
+            <div class="{{ 'active: text-3xl text-black' if category == 'metal' else '' }}">Metal</div>
+            <div class="{{ 'active: text-3xl text-black' if category == 'paper' else '' }}">Paper</div>
+            <div class="{{ 'active: text-3xl text-black' if category == 'plastic' else '' }}">Plastic</div>
+        </div>
+        <div class="identifier flex flex-row justify-center items-center font-semibold text-xl text-green-700 mx-8 mt-4 border-2 border-green-500 p-4 rounded-lg bg-green-200">
+            <p>{{ 'ORGANIK' if (category == 'cardboard' or category == 'paper') else 'NON ORGANIK'  }}</p>
+        </div>
+    </div>
+</body>
+</html>
